@@ -97,13 +97,13 @@ def single_review_sentiment_score(review):
 		        poscount += 1
 		        for w in seg_sent[s:i]:
 		           poscount = match(w, poscount)
-		        a = i + 1
+		        s = i + 1
 
 		    elif word in negdict:
 		        negcount += 1
 		        for w in seg_sent[s:i]:
 		        	negcount = match(w, negcount)
-		        a = i + 1
+		        s = i + 1
 
 		    # Match "!" in the review, every "!" has a weight of +2
 		    elif word == "！".decode('utf8') or word == "!".decode('utf8'):
